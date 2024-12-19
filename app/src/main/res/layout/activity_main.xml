@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/BaseFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:navGraph = "@navigation/nav_graph"
+        app:defaultNavHost = "true"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_weight="1"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/ButtomNV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/menu_nav"
+        android:layout_weight="10"/>
+
+</LinearLayout>
+</layout>
